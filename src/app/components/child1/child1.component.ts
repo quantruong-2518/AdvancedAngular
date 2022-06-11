@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
+=======
+import { Component, forwardRef, OnInit } from '@angular/core';
+>>>>>>> 1b885bdb918bb8ddb8abb9d44b272e46f2af2ef6
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -14,8 +18,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class Child1Component implements OnInit, ControlValueAccessor {
+<<<<<<< HEAD
   @Input() readonly = false;
 
+=======
+>>>>>>> 1b885bdb918bb8ddb8abb9d44b272e46f2af2ef6
   key = '';
 
   onInputChange = (key: string): string => key;
@@ -37,9 +44,12 @@ export class Child1Component implements OnInit, ControlValueAccessor {
   }
   registerOnTouched(fn: any): void {
     this.onInputTouched = fn;
+<<<<<<< HEAD
   }
   setDisabledState(isDisable: boolean) {
     this.readonly = isDisable;
+=======
+>>>>>>> 1b885bdb918bb8ddb8abb9d44b272e46f2af2ef6
   }
 
   // * Methods

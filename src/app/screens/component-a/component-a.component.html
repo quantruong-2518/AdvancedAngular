@@ -1,4 +1,6 @@
-<form [formGroup]="customForm">
-  <child1></child1>
-  <child2></child2>
+<form [formGroup]="customForm" (ngSubmit)="submitForm()">
+  <custom-input formControlName="name" [readonly]="true"></custom-input>
+  <custom-input formControlName="age"></custom-input>
+
+  <button type="submit">Submit form</button>
 </form>

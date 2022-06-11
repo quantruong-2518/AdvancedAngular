@@ -15,7 +15,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class Child1Component implements OnInit, ControlValueAccessor {
   @Input() readonly = false;
-
   key = '';
 
   onInputChange = (key: string): string => key;
@@ -47,6 +46,6 @@ export class Child1Component implements OnInit, ControlValueAccessor {
   onKeyUp(e: any) {
     this.key = e.target.value;
     this.onInputChange(this.key);
-    // this.onInputTouched();
+    this.onInputTouched();
   }
 }

@@ -1,1 +1,6 @@
-<input type="text" placeholder="Enter your name..." />
+<input
+  (keyup)="onKeyUp($event)"
+  [readonly]="readonly"
+  type="text"
+  placeholder="Enter your name..."
+/>

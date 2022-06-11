@@ -11,10 +11,22 @@ export class ComponentAComponent implements OnInit {
 
   constructor(private pb: FormBuilder) {}
 
+  // * Lifecycle
+
   ngOnInit(): void {
     this.customForm = this.pb.group({
       name: new FormControl(''),
       age: new FormControl(20),
     });
+  }
+
+  // * Methods
+
+  submitForm() {
+    const form = this.customForm.value;
+    console.log(
+      '🚀 ~ file: component-a.component.ts ~ line 27 ~ ComponentAComponent ~ submitForm ~ form',
+      form,
+    );
   }
 }

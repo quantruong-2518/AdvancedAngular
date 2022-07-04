@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-component-a',
@@ -7,16 +7,16 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./component-a.component.scss'],
 })
 export class ComponentAComponent implements OnInit {
-  customForm!: FormGroup;
+  customForm!: UntypedFormGroup;
 
-  constructor(private pb: FormBuilder) {}
+  constructor(private pb: UntypedFormBuilder) {}
 
   // * Lifecycle
 
   ngOnInit(): void {
     this.customForm = this.pb.group({
-      name: new FormControl(''),
-      age: new FormControl(20),
+      name: new UntypedFormControl(''),
+      age: new UntypedFormControl(20),
     });
   }
 
